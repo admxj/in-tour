@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>High-Speed Rail Journey - China by Train - China Guide</title>
-  <meta name="description" content="2-week China itinerary by high-speed train. Shanghai, Nanjing, Suzhou, Hangzhou, and more.">
+  <title data-i18n="rail.title">High-Speed Rail Journey - China by Train - China Guide</title>
+  <meta name="description" data-i18n-attr="content:rail.metaDesc" content="2-week China itinerary by high-speed train. Shanghai, Nanjing, Suzhou, Hangzhou, and more.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -13,10 +13,10 @@
       <a href="../index.html" class="logo">China<span>Guide</span></a>
       <nav>
         <ul class="nav-list">
-          <li><a href="../cities/beijing.html">Destinations</a></li>
-          <li><a href="first-time-china.html">Itineraries</a></li>
-          <li><a href="../essentials/visa-guide.html">Travel Essentials</a></li>
-          <li><a href="../faq.html">FAQs</a></li>
+          <li><a href="../cities/beijing.html" data-i18n="nav.destinations">Destinations</a></li>
+          <li><a href="first-time-china.html" data-i18n="nav.itineraries">Itineraries</a></li>
+          <li><a href="../essentials/visa-guide.html" data-i18n="nav.essentials">Travel Essentials</a></li>
+          <li><a href="../faq.html" data-i18n="nav.faq">FAQs</a></li>
         </ul>
       </nav>
       <div class="nav-toggle"><span></span><span></span><span></span></div>
@@ -25,8 +25,8 @@
 
   <section class="page-header">
     <div class="container">
-      <h1>High-Speed Rail Journey</h1>
-      <p>14 Days • 5 Cities • Explore China by Train</p>
+      <h1 data-i18n="rail.heading">High-Speed Rail Journey</h1>
+      <p data-i18n="rail.subtitle">14 Days • 5 Cities • Explore China by Train</p>
     </div>
   </section>
 
@@ -34,14 +34,14 @@
     <div class="container">
       <div class="guide-content">
         <div class="guide-section">
-          <h2>Route Overview</h2>
-          <p><strong>Shanghai (3 days)</strong> → Train (25 min) → <strong>Suzhou (2 days)</strong> → Train (1 hour) → <strong>Nanjing (2 days)</strong> → Train (3 hours) → <strong>Hangzhou (2 days)</strong> → Train (1 hour) → <strong>Wuyuan (2 days)</strong></p>
-          <p>Experience China's well-connected high-speed rail network on this scenic journey through the Yangtze Delta. Each city offers unique character—from Shanghai's modernity to Wuyuan's ancient villages.</p>
+          <h2 data-i18n="rail.routeTitle">Route Overview</h2>
+          <p data-i18n-html="rail.routeP1"><strong>Shanghai (3 days)</strong> → Train (25 min) → <strong>Suzhou (2 days)</strong> → Train (1 hour) → <strong>Nanjing (2 days)</strong> → Train (3 hours) → <strong>Hangzhou (2 days)</strong> → Train (1 hour) → <strong>Wuyuan (2 days)</strong></p>
+          <p data-i18n="rail.routeP2">Experience China's well-connected high-speed rail network on this scenic journey through the Yangtze Delta. Each city offers unique character—from Shanghai's modernity to Wuyuan's ancient villages.</p>
         </div>
         <div class="guide-section">
-          <h2>Book Your Trip</h2>
+          <h2 data-i18n="rail.bookTitle">Book Your Trip</h2>
           <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-            <a href="https://www.trip.com/train/list" target="_blank" class="btn btn-primary">Search Trains</a>
+            <a href="https://www.trip.com/train/list" target="_blank" class="btn btn-primary" data-i18n="rail.trainsBtn">Search Trains</a>
           </div>
         </div>
       </div>
@@ -50,9 +50,10 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom"><p>© 2026 China Guide.</p></div>
+      <div class="footer-bottom"><p data-i18n="footer.copyright">© 2026 China Guide.</p></div>
     </div>
   </footer>
   <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
 </body>
 </html>

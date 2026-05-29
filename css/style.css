@@ -695,3 +695,32 @@ img {
     font-size: 2rem;
   }
 }
+
+/* Language Switcher */
+.lang-toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  background: var(--primary);
+  color: var(--text-white);
+}
+
+/* CJK font support */
+html[lang="zh"] body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
+}
