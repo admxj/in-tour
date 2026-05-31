@@ -9,6 +9,15 @@
 
 ---
 
+# 版本记录
+
+| 版本 | 日期 | 变更内容 |
+|------|------|----------|
+| V1.0 | 2026-05-28 | 初始版本 |
+| V1.1 | 2026-05-31 | 补充已实现功能：城市列表页(destinations.html)、城市详情页、重庆页(chongqing.html)、中英文i18n支持、本地城市图片、热门行程独立详情页 |
+
+---
+
 # 一、项目背景
 
 随着中国旅游逐渐恢复开放，越来越多的海外游客开始重新关注中国自由行市场。
@@ -51,9 +60,7 @@ Japan Guide 在“日本自由行”领域已经验证了该模式的成功。
 
 最终形成：
 
-内容 → 流量 → Trip.com 预订 → 联盟分佣
-
-的商业闭环。
+内容 → 流量 → Trip.com 预订 → 联盟分佣的商业闭环。
 
 ---
 
@@ -185,9 +192,13 @@ Japan Guide 在“日本自由行”领域已经验证了该模式的成功。
 
 解决外国游客来中国的核心障碍：
 
-### 行前障碍
+### 语言友好
 
-- 不知道是否值得来
+- 中英文双语支持
+- 语言切换器（导航栏）
+- 重要术语中英对照
+
+### 行前障碍
 - 不知道怎么玩
 - 担心签证
 - 担心支付
@@ -282,13 +293,15 @@ CTA：
 
 ## 模块三：热门路线推荐
 
-展示：
+展示（**每个卡片必须可点击跳转至单独路线详情页**）：
 
-- First Time China Trip
-- China in 7 Days
-- High-Speed Rail Journey
-- Food Tour in Sichuan
-- Ancient China Route
+- First Time China Trip → `itineraries/first-time-china.html` ✅ 已实现
+- China in 7 Days → `itineraries/china-7-days.html` ✅ 已实现
+- High-Speed Rail Journey → `itineraries/high-speed-rail.html` ✅ 已实现
+- Food Tour in Sichuan → 待实现
+- Ancient China Route → 待实现
+
+> ⚠️ 页面实现要求：每个行程卡片必须用 `<a href="...">` 包裹，支持点击跳转
 
 每条路线展示：
 
@@ -316,14 +329,16 @@ CTA：
 
 展示：
 
-- 北京
-- 上海
-- 西安
-- 成都
+- 北京 ⭐ 本地图片
+- 上海 ⭐ 本地图片
+- 西安 ⭐ 本地图片
+- 成都 ⭐ 本地图片
 - 桂林
-- 张家界
-- 重庆
+- 张家界 ⭐ 本地图片
+- 重庆 ⭐ 新增页面
 - 杭州
+
+> ⭐ 表示已使用本地高质量图片
 
 ---
 
@@ -344,7 +359,9 @@ CTA：
 
 功能：
 
-展示所有推荐旅游城市。
+展示所有推荐旅游城市，支持城市图片展示。
+
+已实现页面：`cities/destinations.html`
 
 支持：
 
@@ -365,9 +382,22 @@ CTA：
 
 # 7.2 城市详情页
 
-每个城市需要包含以下模块：
+每个城市需要包含以下模块。
+
+已实现城市页面：
+
+- `cities/beijing.html`
+- `cities/shanghai.html`
+- `cities/xian.html`
+- `cities/zhangjiajie.html`
+- `cities/chengdu.html`
+- `cities/chongqing.html` ⭐ 新增
+
+---
 
 ## 城市简介
+
+每个城市包含城市特色图片（使用本地高质量图片）。
 
 包括：
 
