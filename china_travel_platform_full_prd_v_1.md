@@ -15,6 +15,7 @@
 |------|------|----------|
 | V1.0 | 2026-05-28 | 初始版本 |
 | V1.1 | 2026-05-31 | 补充已实现功能：城市列表页(destinations.html)、城市详情页、重庆页(chongqing.html)、中英文i18n支持、本地城市图片、热门行程独立详情页 |
+| V1.2 | 2026-05-31 | SEO优化：Structured Data、Open Graph、Twitter Card；修复热门城市Guilin/Hangzhou链接错误；成都页面内容扩充（景点详细描述、美食指南） |
 
 ---
 
@@ -219,6 +220,65 @@ Japan Guide 在“日本自由行”领域已经验证了该模式的成功。
 
 ---
 
+# 四、SEO技术规范
+
+## 4.1 元数据要求
+
+每个页面必须包含：
+
+- `<title>` 格式：`[城市名] Travel Guide - China Guide`
+- `<meta name="description">` 页面描述（150-160字符）
+- `<meta name="keywords">` 关键词（逗号分隔）
+- `<meta name="robots">` 设置为 `index, follow`
+- `<link rel="canonical">` 规范URL
+
+## 4.2 社交分享标签
+
+```html
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="...">
+<meta property="og:description" content="...">
+<meta property="og:image" content="图片URL">
+<meta property="og:url" content="页面URL">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+```
+
+## 4.3 Structured Data（结构化数据）
+
+使用 JSON-LD Schema.org 格式：
+
+- **首页**：`TravelWebsite` 类型，含 aggregateRating
+- **城市页**：`City` 类型，含地理坐标 geo
+- **组织**：`Organization` 类型
+
+示例：
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "TravelWebsite",
+  "name": "China Guide",
+  "url": "https://tourforchina.com/",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "256"
+  }
+}
+```
+
+## 4.4 SEO 已实现状态
+
+| 页面 | keywords | og:image | canonical | Structured Data |
+|------|----------|----------|----------|----------------|
+| 首页 | ✅ | ✅ | ✅ | ✅ TravelWebsite |
+| 城市页 | ✅ | ✅ | ✅ | ✅ City |
+| 行程页 | 待补充 | 待补充 | 待补充 | 待补充 |
+
+---
+
 # 五、产品架构
 
 # 5.1 网站结构
@@ -420,6 +480,8 @@ CTA：
 - 门票
 - 交通方式
 - 游玩建议
+
+> ⭐ 成都页面已实现详细景点描述（含交通指南、四季游览建议）和美食专区（含推荐餐厅、必点菜品）
 
 ---
 
